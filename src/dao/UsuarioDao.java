@@ -20,9 +20,9 @@ public class UsuarioDao extends Conexion {
 
             while (rs.next()) {
                 Usuario user = new Usuario(
-                        Integer.valueOf(rs.getString("usuid")),
-                        rs.getString("usunombre"),
-                        rs.getString("usuapellido")
+                        Integer.valueOf(rs.getString("id")),
+                        rs.getString("nombre"),
+                        rs.getString("apellido")
                 );
                 usuarios.add(user);
             }
@@ -30,6 +30,7 @@ public class UsuarioDao extends Conexion {
             System.out.println("" + e.getMessage());
             // TODO: handle exception
         }
+
         return usuarios;
     }
     //Guardar un nuevo usuario
@@ -43,7 +44,8 @@ public class UsuarioDao extends Conexion {
             ps.setString(2, usuario.getApellido());
             ps.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("la tabla no exist");
+            //e.printStackTrace();
         }
     }
 
