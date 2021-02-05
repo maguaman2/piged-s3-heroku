@@ -54,7 +54,7 @@ public class UsuarioDao extends Conexion {
         try (Connection connection = connectToDB()) {
             PreparedStatement ps = null;
             //Statement statement = connection.createStatement();
-            String query = "update usuario set usunombre = ?, usuapellido = ? where usuid =?"; //ojo no olvidarsse del where
+            String query = "update usuario set nombre = ?, apellido = ? where id =?"; //ojo no olvidarsse del where
             ps = connection.prepareStatement(query);
             ps.setString(1, usuario.getNombre());
             ps.setString(2, usuario.getApellido());
@@ -72,7 +72,7 @@ public class UsuarioDao extends Conexion {
         try (Connection connection = connectToDB()) {
             PreparedStatement ps = null;
             //Statement statement = connection.createStatement();
-            String query = "delete from usuario where usuid =? ";///ojo con el where
+            String query = "delete from usuario where id =? ";///ojo con el where
             ps = connection.prepareStatement(query);
             ps.setInt(1, id);
 

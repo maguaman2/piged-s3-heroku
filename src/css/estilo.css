@@ -1,19 +1,22 @@
-.root
-{
--fx-background-color: #234343;
+.root {
+-fx-background-color: #B3C6EF;
 }
+
 #box1{
--fx-background-color: #563445;
+-fx-background-color: #555E7B;
 }
-.button
-{
--fx-background-color: white;
+
+.button{
+-fx-background-color: #B7D968;
 }
+
 .label{
--fx-background-color: white;
+-fx-color: #8BB6D6;
+-fx-background-color: #555E7B;
 }
+
 .table-view, .tree-table-view {
     /* Constants used throughout the tableview. */
-    -fx-background-color: yellow;
+    -fx-background-color: #B576AD;
 }
 
